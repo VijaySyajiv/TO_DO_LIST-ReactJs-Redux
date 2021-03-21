@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing:border-box;
+}
+body{
+  background-color: rgb(23, 23, 53);
+  margin: 80px;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+padding: 30px 40px;
+color: white;
+text-align: center;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.box:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+input{
+  background-color: rgb(26, 41, 41);
+  color: aliceblue;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+  
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+ul{
+  
+  clear: both;
+    margin: 0px;
+    padding: 0px;
+}
+ul li{
+  background-color: rgb(6, 30, 31);
+  list-style:none;
+  cursor: pointer;
+  text-align: left;
+  color: rgb(156, 136, 48);
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+ul li:hover{
+  background: rgb(39, 110, 151);
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.close:hover {
+  background-color:black;
+  color: white;
 }
